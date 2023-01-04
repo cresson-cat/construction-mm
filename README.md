@@ -23,6 +23,10 @@ Assume the following template
    1. [Reference URL](https://katblog.manadream.net/index.php/2022/07/23/mattermost-slack-data-import/#Mattermost-2)
       1. Register data according to the URL above
 
+## SendGrid Configuration Reference
+
+<https://forum.mattermost.com/t/mattermost-sendgrid-dear-god-what-am-i-doing-wrong/11841/4>
+
 ## Other Reference URLs
 
 <https://note.com/arkb/n/nedecd6c170f5>
