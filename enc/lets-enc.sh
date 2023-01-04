@@ -2,7 +2,7 @@
 set -ux
 
 # Install lego in advance. Also, run the following commands
-# sudo /opt/bitnami/letsencrypt/lego --tls --email="sample@sample.co.jp" --domains="two-cats-hc-mm.com" --domains="www.two-cats-hc-mm.com" --path="/opt/bitnami/letsencrypt" run
+# sudo /opt/bitnami/letsencrypt/lego --tls --email="sample@sample.co.jp" --domains="sample-domain" --domains="www.sample-domain" --path="/opt/bitnami/letsencrypt" run
 
 # Back up existing certificates
 sudo mv /opt/bitnami/nginx/conf/bitnami/certs/server.crt /opt/bitnami/nginx/conf/bitnami/certs/server.crt.old
