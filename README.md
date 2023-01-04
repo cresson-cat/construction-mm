@@ -1,22 +1,28 @@
 # construction-mm
 
-GCP mattermost の構築用のスクリプト。slack のデータを mattermost 用に移植する  
-以下のテンプレートを前提とする
+Script for building GCP mattermost, porting slack data for mattermost  
+Assume the following template
 
 [Mattermost Team Edition packaged by Bitnami](https://console.cloud.google.com/marketplace/product/bitnami-launchpad/mattermost)
 
-## 使い方
+## How to use
 
-1. SSL 化する
-   1. [SSL化参考](https://www.karelie.net/mattermost-gce-ssl/#gcevmlets_encrypt_ssl_certificatessl) を参考に進める（lego の導入等）
-   1. `./enc/lets-enc.sh` を実行する
-1. slack のデータを mattermost 用に変換する
-   1. [slackデータの変換](https://katblog.manadream.net/index.php/2022/07/23/mattermost-slack-data-import/) を参考に進める
-   1. 上記URLを参考とする。`mmetl` `slack-advanced-exporter` をダウンロードし、`./import/` 配下に格納する
-   1. 上記URLの手順に従い、slack のデータをダウンロードし、`./import/` 配下に格納する。ファイル名は `slack_data.zip` とする
-   1. `link.sh` の上部にある、slack API のトークン用変数を、現状に合わせて修正する
-   1. `./import/link.sh` を実行する
+1. SSL-enabled
+   1. [Reference URL](https://www.karelie.net/mattermost-gce-ssl/#gcevmlets_encrypt_ssl_certificatessl)
+      1. Refer to the above and introduce lego
+      1. Execute `./enc/lets-enc.sh`
+1. Convert slack data to mattermost
+   1. [Reference URL](https://katblog.manadream.net/index.php/2022/07/23/mattermost-slack-data-import/#i-2)
+      1. Using the above URL as a reference, store the following in `./import/`
+         - mmetl
+         - slack-advanced-exporter
+      1. Follow the instructions in the URL above to download the slack data and store it under `./import/`. Name the file `slack_data.zip`
+      1. Modify the variables for the slack API token at the top of `link.sh` to match the current situation
+      1. Execute `./import/link.sh`
+1. Data Registration
+   1. [Reference URL](https://katblog.manadream.net/index.php/2022/07/23/mattermost-slack-data-import/#Mattermost-2)
+      1. Register data according to the URL above
 
-## 全体の参考
+## Other Reference URLs
 
 <https://note.com/arkb/n/nedecd6c170f5>
